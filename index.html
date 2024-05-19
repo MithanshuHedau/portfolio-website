@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/photo.jpg" type="image/x-icon">    
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  
+  
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/ffd7998a80.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box" id="myphoto">
+          <img src="./assets/images/photo.jpg" alt="Mithanshu Hedau" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mithanshu Hedau">Mithanshu Hedau</h1>
+
+          <p class="title">Web developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="#" class="contact-link">hedaumithanshu@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="#" class="contact-link">9096345738</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">13 Nov 2003</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Nagpur</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/mithanshu.hedau?mibextid=ZbWKwL" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/mithanshu-hedau-15066b282" class="social-link">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/mithanshuhedau?igsh=MWlhbWQ0emdkYzJxcg==" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link pro" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            My name is <i>Mithanshu </i>, and I live in Nagpur. I am currently studying at Shri Ramdeobaba University in 2nd Year Cse Department  .
+          </p>
+
+          <p>
+            As a Developer and  UI/UX Designer, I specialize in web development. My passion lies in transforming complex problems into elegant, intuitive designs. I strive to create websites that are both functional and user-friendly while maintaining a visually appealing aesthetic. Each project I undertake receives a personal touch to ensure the final product is eye-catching and easy to navigate. 
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mathematics Tutor</h4>
+
+                <p class="service-item-text">
+                  Spreading knowledge of Mathematics to urgers
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!-- <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Area I'm Good at</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/html-5.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/css-3.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/js.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/react.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/java.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/database-storage.png  " alt="client logo">
+              </a>
+            </li>
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/c-.png  " alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" style="transition: all ease-out 2s;" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">My Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Shri Ramdeobaba University , Nagpur</h4>
+
+              <span>2022 — 2026</span>
+
+              <p class="timeline-text">
+                Department : CSE (2nd Year) <br> 
+                Cgpa       : 8.7 ( Till Now )
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Prerna College of Science , Nagpur</h4>
+
+              <span>2019 — 2021</span>
+
+              <p class="timeline-text">
+                12th Board : 91 % <br>
+                Stream : Science
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Prerna Convent </h4>
+
+              <span>2018-2019</span>
+
+              <p class="timeline-text">
+                10th Board : 83 %
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Prodigy Internship</h4>
+
+              <span>15 April 2024 - 15 May 2024</span>
+
+              <p class="timeline-text">
+                Internship in the field of Frontend Web Development
+                <a href="https://drive.google.com/file/d/1i2Xt2VWix8zGh0SR-yx31pZuFnZQVNcT/view?usp=drivesdk" style="color: rgb(15, 196, 72);">See Offer Letter </a>
+              </p>
+
+            </li>
+
+            
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">YBL Foundation Aiml Internship</h4>
+
+              <span>18 May 2024 - 12 Aug 2024</span>
+
+              <p class="timeline-text">
+                Intership is  Going on right now 
+                <a href="#"style="color: rgb(15, 196, 72);">See Certificate</a>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Development</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Design Website</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Problem Solving abilities</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Database Management</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <!-- <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li> -->
+
+          </ul>
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <!-- <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div> -->
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mithanshuhedau.github.io/Weather-App-/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/weather.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Weather App</h3>
+
+                <p class="project-category">Web development (Html css Js )</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mithanshuhedau.github.io/To-Do-List/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/todo.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ToDO List</h3>
+
+                <p class="project-category">Web development (Html Css JS )</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="https://mithanshuhedau.github.io/lavarEv/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/laravel.png" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">LavarEV Landing Page</h3>
+
+                <p class="project-category">Web Development and Web design (Html css Js)</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="data:image/jpeg;base64,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" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Coming Soon Projects  </h3>
+
+                <p class="project-category"></p>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.805039733895!2d79.13756567503408!3d21.12033748055195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0xba9d4222d873d725!2s44CR%2B43J%2C%20Nagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1716104306493!5m2!1sen!2sin" 
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="https://api.web3forms.com/submit" method="POST" class="form"   data-form>
+
+            <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+            <input type="hidden" name="access_key" value="41a7b63e-f9b2-4b0d-88ce-bf8a9ef0310d">
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" id="names"  placeholder="Full name" required data-form-input>
+              <input type="email"  class="form-input" id="textips" placeholder="Email address" >
+              
+              <input type="text" name="Email id " id="names2"  placeholder="Retype  your email" required data-form-input>
+              <input type="number" name="Phone Number " placeholder="Enter the Phone Number" id="num">
+            </div>
+            
+            <textarea name="message" class="form-input " id="textmsg" placeholder="Your Message" required data-form-input></textarea>
+
+            <button  class="form-btn sendmsg" type="submit" onclick="sendmail()" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
