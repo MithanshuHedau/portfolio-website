@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:700';
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background: rgb(18, 18, 18);
+            color: #444;
+            font-family: 'Lato', sans-serif;
+            font-size: 1em;
+            line-height: 1.625;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .wrap {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+        }
+        .wrap h1{
+          color: #fff;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .gallery-wrap,
+        #gallery {
+            overflow: hidden;
+        }
+
+        #filters {
+            margin: 1%;
+            padding: 0;
+            list-style: none;
+            overflow: hidden;
+        }
+
+        #filters li {
+            float: left;
+        }
+
+        #filters li span {
+            display: block;
+            padding: 5px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all ease-in-out 0.25s;
+            font-weight: bold;
+        }
+
+        #filters li:hover span {
+            color: #bdbdbd;
+            font-weight: bold;
+        }
+
+        #filters li span.active {
+            background: #1fbae7;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+
+        .gallery-item {
+            float: left;
+            width: 33.333%;
+            padding: 10px;
+            position: relative;
+            z-index: 10;
+            display: none;
+        }
+
+        .inside {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .details,
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+        }
+
+        .details {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .details h2 {
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-align: center;
+            margin: 0;
+        }
+
+        .details p {
+            color: #fff;
+            font-size: 1em;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 0;
+            text-transform: uppercase;
+        }
+        .inside img {
+            float: left;
+            width: 100%;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+            transition: all 0.6s ease-in-out;
+        }
+        .inside,.overlay{
+          border-radius: 20px;
+        }
+        .inside:hover{
+          scale: 1.08;
+          transition: 0.7s ease;
+        }
+        
+
+        .gallery-item:hover .details,
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        
+
+        @media (max-width: 30em) {
+            .wrap {
+                padding-left: 1em;
+                padding-right: 1em;
+            }
+
+            .gallery-item {
+                float: none;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:412px) {
+          #filters{
+            /* padding-right: 30px; */
+            font-size: 10px;
+            width: 350px;
+            /* height: 100px; */
+            /* background-color: #882222; */
+            /* display: flex; */
+            display: grid;
+          } 
+          #gallery{
+            margin-top: 10px;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Credentials </h1>
+        
+        <div class="gallery-wrap">
+          
+          <ul id="filters" class="clearfix">
+            <li><span class="filter active" data-filter="*">All</span></li>
+            <li><span class="filter" data-filter=".print">Projects</span></li>
+            <li><span class="filter" data-filter=".strategy">Mini Projects</span></li>
+            <li><span class="filter" data-filter=".logo">Certification &  Offer-letters</span></li>
+            <!-- <li><span class="filter" data-filter=".web">Web</span></li> -->
+          </ul>
+          
+          <div id="gallery">
+          
+          <a class="gallery-item logo" href="https://drive.google.com/file/d/1NOv4fpGhB1j0Ze5ePHxxgYYTK3p-XFVc/view?usp=sharing" data-cat="logo">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Aicte Intership</h2>
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img class="imageing" src="aicte.jpg"" />
+            </div>
+          </a>
+          <a class="gallery-item logo" href="https://drive.google.com/file/d/1oET2onypjJnt54e7WiUdmcH9BZhLgYJN/view?usp=sharing" data-cat="logo">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Java Dsa</h2>
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="dsa.jpg" alt="" />
+            </div>
+          </a>
+          
+          <a class="gallery-item logo" href="https://drive.google.com/file/d/1i2Xt2VWix8zGh0SR-yx31pZuFnZQVNcT/view?usp=sharing" data-cat="logo">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Prodigy Web-Dev Internship</h2>  
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="prodigy.png" alt="" />
+            </div>
+          </a>
+
+          <a class="gallery-item logo" href="https://drive.google.com/file/d/1j8VBwgP0gZE_kDs2yRYVNPHxQFiLtPga/view?usp=sharing" data-cat="logo">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Coding Samurai Web-Dev Internship</h2>  
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="samurai.png" alt="" />
+            </div>
+          </a>
+          
+          
+          <a class="gallery-item print" href="#" data-cat="print">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Laravel Landing Page</h2>
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="laravel.png" alt="" />
+            </div>
+          </a>
+          
+          <a class="gallery-item strategy" href="#" data-cat="strategy">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Weather App</h2>
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="weather.png" alt="" />
+            </div>
+          </a>
+          
+          
+          
+          <a class="gallery-item strategy" href="#" data-cat="strategy">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>To-Do List</h2>
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="todolist.png" alt="" />
+            </div>
+          </a>
+          
+          <a class="gallery-item web strategy" href="#" data-cat="web strategy">
+            <div class="inside">
+              <div class="details">
+                <div class="text">
+                  <h2>Comming Soon</h2>
+                </div>
+              </div>
+              <div class="overlay"></div>
+              <img src="comingsoon.png" alt="" />
+            </div>
+          </a>
+            
+          </div><!--/gallery-->
+          
+        </div><!--/gallery-wrap-->
+        
+      </div>
+      <!-- Ensure jQuery is loaded -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Ensure mixItUp is loaded -->
+      <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+      <script>
+        $(function () {
+            var filterList = {
+                init: function () {
+                    // https://mixitup.kunkalabs.com/
+                    $('#gallery').mixItUp({
+                        selectors: {
+                            target: '.gallery-item',
+                            filter: '.filter'
+                        },
+                        load: {
+                            filter: '*' // show all items on page load.
+                        }     
+                    });								
+                }
+            };
+            // Filter ALL the things
+            filterList.init();
+        });
+      </script>
+      <script src="main.js"></script>
+</body>
+</html>
