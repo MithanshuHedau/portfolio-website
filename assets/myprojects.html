@@ -4,388 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="photo.jpg" type="image/x-icon">    
+    <link rel="shortcut icon" href="photo.jpg" type="image/x-icon">
     <style>
-        @import 'https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:700';
-
-        html {
-            box-sizing: border-box;
-        }
-
-        *,
-        *:before,
-        *:after {
-            box-sizing: inherit;
-        }
-
         body {
-            background: rgb(18, 18, 18);
-            color: #444;
-            font-family: 'Lato', sans-serif;
-            font-size: 1em;
-            line-height: 1.625;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        h1, h2, h3 {
-            font-family: 'Roboto Slab', serif;
-        }
-
-        .wrap {
-            margin: 0 auto;
-            max-width: 1000px;
-            width: 100%;
-        }
-        .wrap h1{
-          color: #fff;
-        }
-
-        h1 {
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin: 50px 0;
-        }
-
-        .gallery-wrap,
-        #gallery {
-            overflow: hidden;
-        }
-
-        #filters {
-            margin: 1%;
+            margin: 0;
             padding: 0;
-            list-style: none;
-            overflow: hidden;
+            background-color: #121212;
+            color: white;
         }
-
-        #filters li {
-            float: left;
+        #filters {
+            margin: 30px 0;
         }
-
-        #filters li span {
-            display: block;
-            padding: 5px 20px;
-            text-decoration: none;
-            color: #ffffff;
+        button {
+            padding: 18px 22px;
+            margin: 8px;
+            border: none;
             cursor: pointer;
-            text-transform: uppercase;
-            transition: all ease-in-out 0.25s;
+            background-color: #ff6600;
+            color: white;
+            border-radius: 8px;
             font-weight: bold;
+            font-size: 1rem;
+            transition: 0.3s ease-in-out;
         }
-
-        #filters li:hover span {
-            color: #bdbdbd;
-            font-weight: bold;
+        button:hover {
+            background-color: #cc5200;
+            transform: scale(1.1);
         }
-
-        #filters li span.active {
-            background: #1fbae7;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 20px;
-        }
-
-        .gallery-item {
-            float: left;
-            width: 33.333%;
-            padding: 10px;
-            position: relative;
-            z-index: 10;
-            display: none;
-        }
-
-        .inside {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-            height: 100%;
-        }
-
-        .details,
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            opacity: 0;
-        }
-
-        .details {
+        .gallery {
             display: flex;
-            align-items: center;
+            flex-wrap: wrap;
             justify-content: center;
-            z-index: 2;
-            transition: all 0.3s ease-in-out;
+            gap: 25px;
+            padding: 40px;
         }
-
-        .details h2 {
-            color: #fff;
-            font-size: 1.5em;
-            font-weight: 700;
-            letter-spacing: 1px;
+        .gallery-item {
+            width: 300px;
+            height: 400px;
             text-align: center;
-            margin: 0;
+            background: #1c1c1c;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(53, 53, 52, 0.7);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-
-        .details p {
-            color: #fff;
-            font-size: 1em;
-            letter-spacing: 2px;
-            text-align: center;
-            margin: 0;
-            text-transform: uppercase;
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(53, 53, 52, 0.7);
         }
-        .inside img {
-            float: left;
+        .gallery-item img {
             width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: none;
         }
-
-        .overlay {
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1;
-            transition: all 0.6s ease-in-out;
-        }
-        .inside,.overlay{
-          border-radius: 20px;
-        }
-        .inside:hover{
-          scale: 1.08;
-          transition: 0.7s ease;
-        }
-        
-
-        .gallery-item:hover .details,
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-        
-
-        @media (max-width: 30em) {
-            .wrap {
-                padding-left: 1em;
-                padding-right: 1em;
-            }
-
-            .gallery-item {
-                float: none;
-                width: 100%;
-            }
-        }
-        @media screen and (max-width:412px) {
-          #filters{
-            /* padding-right: 30px; */
-            font-size: 10px;
-            width: 350px;
-            /* height: 100px; */
-            /* background-color: #882222; */
-            /* display: flex; */
-            display: grid;
-          } 
-          #gallery{
-            margin-top: 10px;
-          }
-        }
-        a{
-          text-decoration: none;
+        p {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #ff6600;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Credentiials </h1>
+    <div id="filters">
+        <button onclick="filterSelection('all')"> Show All</button>
+        <button onclick="filterSelection('projects')"> Projects</button>
+        <button onclick="filterSelection('mini-projects')"> Mini Projects</button>
+        <button onclick="filterSelection('certifications')"> Certifications</button>
+        <button onclick="filterSelection('offer-letters')"> Offer Letters and Open Source </button>
+    </div>
+
+    <div class="gallery">
+
+
+        <div class="gallery-item projects">
+            <a target="_blank" href="https://css-reimagine-round1-puma-website.vercel.app/"><img src="Puma.png" alt="Project 1"></a>
+            <p>Puma Wesbite </p>
+        </div>
+        <div class="gallery-item projects">
+            <a target="_blank" href="https://mithanshuhedau.github.io/lavarEv/"><img src="laravel.png" alt="Project 1"></a>
+            <p>LaraEV Landing Page</p>
+        </div>
+        <div class="gallery-item projects">
+          <a target="_blank" href="https://mithanshu-hedau-chatbot.onrender.com/"><img src="chatbot.png" alt="Project 1"></a>
+          <p>ChatBot Assitant</p>
+        </div>
+        <div class="gallery-item projects">
+          <a target="_blank" href="https://heart-disease-predicition-ml-mithanshu-model.vercel.app/"><img src="Heart.png" alt="Project 1"></a>
+          <p>Heart Diease Risk Predictor</p>
+        </div>
+        <div class="gallery-item projects">
+          <a target="_blank" href="https://github.com/MithanshuHedau/Shortify"><img src="Shortify.png" alt="Project 1"></a>
+          <p>Shortify</p>
+        </div>
+        <div class="gallery-item projects">
+          <a target="_blank" href="https://github.com/MithanshuHedau/Mini_Project2"><img src="Resume.png" alt="Project 1"></a>
+          <p>Resume Shortlister </p>
+        </div>
+
+
+
+        <div class="gallery-item mini-projects">
+            <a target="_blank" href="https://mithanshuhedau.github.io/Weather-App-/"><img src="weather.png" alt="Mini Project 1"></a>
+            <p>Weather Prediction App </p>
+        </div>
+        <div class="gallery-item mini-projects">
+          <a target="_blank" href="https://mithanshuhedau.github.io/To-Do-List/"><img src="Todo.png" alt="Mini Project 1"></a>
+          <p>To-Do List App </p>
+        </div>
         
-        <div class="gallery-wrap">
-          
-          <ul id="filters" class="clearfix">
-            <li><span class="filter active" data-filter="*">All</span></li>
-            <li><span class="filter" data-filter=".print">Projects</span></li>
-            <li><span class="filter" data-filter=".strategy">Mini Projects</span></li>
-            <li><span class="filter" data-filter=".logo">Certification &  Offer-letters</span></li>
-            <!-- <li><span class="filter" data-filter=".web">Web</span></li> -->
-          </ul>
-          
-          <div id="gallery">
-          
-          <a class="gallery-item logo" href="https://drive.google.com/file/d/1NOv4fpGhB1j0Ze5ePHxxgYYTK3p-XFVc/view?usp=sharing" data-cat="logo">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Aicte Intership</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img class="imageing" src="aicte.jpg"" />
-            </div>
-          </a>
-          <a class="gallery-item logo" href="https://drive.google.com/file/d/1oET2onypjJnt54e7WiUdmcH9BZhLgYJN/view?usp=sharing" data-cat="logo">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Java Dsa</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="dsa.jpg" alt="" />
-            </div>
-          </a>
-          
-          <a class="gallery-item logo" href="https://drive.google.com/file/d/1i2Xt2VWix8zGh0SR-yx31pZuFnZQVNcT/view?usp=sharing" data-cat="logo">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Prodigy Web-Dev Internship</h2>  
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="prodigy.png" alt="" />
-            </div>
-          </a>
+        <div class="gallery-item certifications">
+            <a target="_blank" href="https://drive.google.com/file/d/1NOv4fpGhB1j0Ze5ePHxxgYYTK3p-XFVc/view"><img src="aicte.jpg" alt="Certification 1"></a>
+            <p>Aicte Internship</p>
+        </div>
 
-          <a class="gallery-item logo" href="https://drive.google.com/file/d/1rThkzh5C-HTg5LuXpAqYplCBVbtFUnDD/view?usp=drive_link" data-cat="logo">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Prodigy Web-Dev Internship</h2>  
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="ybi.png" alt="" />
-            </div>
-          </a>
+        <div class="gallery-item certifications">
+          <a target="_blank" href="https://drive.google.com/file/d/1oET2onypjJnt54e7WiUdmcH9BZhLgYJN/view"><img src="dsa.jpg" alt="Certification 1"></a>
+          <p>Data Structures and Algorithms</p>
+        </div>
 
-          <a class="gallery-item print" href="https://css-reimagine-round1-puma-website.vercel.app/" data-cat="print">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Puma Website</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="Puma.png" alt="" />
-            </div>
-          </a>
+        <div class="gallery-item certifications">
+          <a target="_blank" href="https://drive.google.com/file/d/1rThkzh5C-HTg5LuXpAqYplCBVbtFUnDD/view"><img src="ybi.png" alt="Certification 1"></a>
+          <p>DS and AIML Ybi Internship </p>
+        </div>
 
-          <a class="gallery-item logo" href="https://drive.google.com/file/d/1j8VBwgP0gZE_kDs2yRYVNPHxQFiLtPga/view?usp=sharing" data-cat="logo">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Coding Samurai Web-Dev Internship</h2>  
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="samurai.png" alt="" />
-            </div>
-          </a>
-          
-          
-          <a class="gallery-item print" href="https://mithanshuhedau.github.io/lavarEv/" data-cat="print">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Laravel Landing Page</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="laravel.png" alt="" />
-            </div>
-          </a>
+        <div class="gallery-item certifications">
+          <a target="_blank" href="https://drive.google.com/file/d/1Ly6diXcdtlKnSeHEpKRWDTizDb6kzbyI/view?usp=sharing"><img src="cloud.png" alt="Certification 1"></a>
+          <p>Ai on public cloud platforms </p>
+        </div>
 
-          <a class="gallery-item print" href="https://mithanshu-hedau-chatbot.onrender.com/" data-cat="print">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2> Chat Bot </h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="chatbot.png" alt="" />
-            </div>
-          </a>
-          
-          <a class="gallery-item print" href="https://heart-disease-predicition-ml-mithanshu-model.vercel.app/" data-cat="print">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Heart Disease Risk Predictor</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="Heart.png" alt="" />
-            </div>
-          </a>
-          
-          <a class="gallery-item strategy" href="#" data-cat="strategy">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Weather App</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="weather.png" alt="" />
-            </div>
-          </a>
-          
-          
-          
-          <a class="gallery-item strategy" href="#" data-cat="strategy">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>To-Do List</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="todolist.png" alt="" />
-            </div>
-          </a>
-          
-          <a class="gallery-item web strategy" href="#" data-cat="web strategy">
-            <div class="inside">
-              <div class="details">
-                <div class="text">
-                  <h2>Comming Soon</h2>
-                </div>
-              </div>
-              <div class="overlay"></div>
-              <img src="comingsoon.png" alt="" />
-            </div>
-          </a>
-            
-          </div><!--/gallery-->
-          
-        </div><!--/gallery-wrap-->
-        
-      </div>
-      <!-- Ensure jQuery is loaded -->
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <!-- Ensure mixItUp is loaded -->
-      <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
-      <script>
-        $(function () {
-            var filterList = {
-                init: function () {
-                    // https://mixitup.kunkalabs.com/
-                    $('#gallery').mixItUp({
-                        selectors: {
-                            target: '.gallery-item',
-                            filter: '.filter'
-                        },
-                        load: {
-                            filter: '*' // show all items on page load.
-                        }     
-                    });								
+        <div class="gallery-item certifications">
+          <a target="_blank" href="https://drive.google.com/file/d/1kHaFNJBPCCCDGiFvZweHMk-UCUYTsJNJ/view?usp=sharing"><img src="GenAI.png" alt="Certification 1"></a>
+          <p>Generative Ai Tools and Techniques </p>
+        </div>
+
+        <div class="gallery-item certifications">
+          <a target="_blank" href="https://drive.google.com/file/d/1b8-sTkCLVDMoOgAlLN9-hbsTy7xeggsj/view?usp=sharing"><img src="network.png" alt="Certification 1"></a>
+          <p>Cisco Networking Basics</p>
+        </div>
+
+        <div class="gallery-item certifications">
+          <a target="_blank" target="_blank" href="https://drive.google.com/file/d/1nfn0JpLfTkrsP3BvpzWdoC6JK_BTBj8Z/view?usp=sharing"><img src="data.png" alt="Certification 1"></a>
+          <p>Cisco Data Analytics</p>
+        </div>
+
+        <div class="gallery-item certifications">
+          <a target="_blank" target="_blank" href="https://drive.google.com/file/d/1ZtFTDu6EOmXiym_MdQ-JJ88MBBoCg2eI/view?usp=drive_link"><img src="Blockchain.png" alt="Certification 1"></a>
+          <p>BlockChain Essesntials</p>
+        </div>
+
+
+        <div class="gallery-item offer-letters">
+            <a target="_blank" href="https://drive.google.com/file/d/1i2Xt2VWix8zGh0SR-yx31pZuFnZQVNcT/view"><img src="prodigy.png" alt="Offer Letter 1"></a>
+            <p>Prodigy Infotech</p>
+        </div>
+        <div class="gallery-item offer-letters">
+          <a target="_blank" href="https://drive.google.com/file/d/1i2Xt2VWix8zGh0SR-yx31pZuFnZQVNcT/view"><img src="samurai.png" alt="Offer Letter 1"></a>
+          <p>Coding Samurai Infotech</p>
+        </div>
+        <div class="gallery-item offer-letters">
+          <a target="_blank" href="https://drive.google.com/drive/folders/1X5ibvJkS5WimFDVGGDqGbd6GuOiPNva7?usp=drive_link"><img src="Gssoc (1).jpeg" alt="Offer Letter 1"></a>
+          <p>Open Source Contributions</p>
+        </div>
+    </div>
+
+    <script>
+        function filterSelection(category) {
+            let items = document.getElementsByClassName("gallery-item");
+            for (let i = 0; i < items.length; i++) {
+                if (category === "all") {
+                    items[i].style.display = "block";
+                } else {
+                    if (items[i].classList.contains(category)) {
+                        items[i].style.display = "block";
+                    } else {
+                        items[i].style.display = "none";
+                    }
                 }
-            };
-            // Filter ALL the things
-            filterList.init();
-        });
-      </script>
-      <script src="main.js"></script>
+            }
+        }
+    </script>
 </body>
 </html>
