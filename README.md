@@ -18,6 +18,7 @@ Styling: Tailwind CSS / CSS / Bootstrap
 Hosting: GitHub Pages
 
 🚀 Features
+
 ✅ Fully Responsive - Works on all devices 📱💻
 
 ✅ Interactive UI - Smooth animations & transitions ✨
@@ -26,8 +27,10 @@ Hosting: GitHub Pages
 
 ✅ Contact Section - Reach out via email & socials 📩
 
-📬 Contact Me
+
+📬 Contact Me : 
+
 If you have any feedback, suggestions, or collaboration opportunities, feel free to connect:
-📧 Email: [Your Email]
+📧 Email: hedaumithanshu@gmail.com
 🐱‍💻 GitHub: github.com/mithanshuhedau
 🔗 LinkedIn: https://www.linkedin.com/in/mithanshu-hedau-15066b282/ 
