@@ -19,8 +19,11 @@ Hosting: GitHub Pages
 
 🚀 Features
 ✅ Fully Responsive - Works on all devices 📱💻
+
 ✅ Interactive UI - Smooth animations & transitions ✨
+
 ✅ Project Showcase - Live demos & GitHub links 🔗
+
 ✅ Contact Section - Reach out via email & socials 📩
 
 📬 Contact Me
