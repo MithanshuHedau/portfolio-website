@@ -1,4 +1,6 @@
 🌐 Mithanshu Hedau - Portfolio Website
+
+
 Welcome to my portfolio website, where I showcase my skills, projects, and achievements.
 
 📌 About
@@ -31,6 +33,10 @@ Hosting: GitHub Pages
 📬 Contact Me : 
 
 If you have any feedback, suggestions, or collaboration opportunities, feel free to connect:
+
 📧 Email: hedaumithanshu@gmail.com
+
 🐱‍💻 GitHub: github.com/mithanshuhedau
+
 🔗 LinkedIn: https://www.linkedin.com/in/mithanshu-hedau-15066b282/ 
+
