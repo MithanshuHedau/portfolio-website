@@ -188,8 +188,8 @@
           </li>
 
           <li class="navbar-item">
-            <!-- <button class="navbar-link pro" data-nav-link>Portfolio</button> -->
-            <a href="assets/myprojects.html" class="navbar-link pro" data-nav-link>My Projects</a>
+            <button class="navbar-link pro" data-nav-link>Projects</button>
+            <!-- <a href="assets/myprojects.html" class="navbar-link pro" data-nav-link>My Projects</a> -->
           </li>
 
           <li class="navbar-item">
@@ -731,10 +731,10 @@
         - #PORTFOLIO
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="projects">
 
         <header>
-          <h2 class="h2 article-title">Portfolio</h2>
+          <h2 class="h2 article-title">Projects</h2>
         </header>
 
         <section class="projects">
@@ -745,28 +745,32 @@
               <button class="active" data-filter-btn>All</button>
             </li>
 
-            <!-- <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+            <li class="filter-item">
+              <button data-filter-btn>Projects</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Applications</button>
+              <button data-filter-btn>Mini Projects</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li> -->
+              <button data-filter-btn>Certificates</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Offer Letter and Open Source</button>
+            </li>
 
           </ul>
           <div class="filter-select-box">
 
-            <button class="filter-select" data-select>
+            <button style="margin-bottom: 15px;" class="filter-select" data-select>
 
-              <!-- <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-selecct-value>Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
-              </div> -->
+              </div>
 
             </button>
 
@@ -777,15 +781,19 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Mini Projects</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Applications</button>
+                <button data-select-item>Projects</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web development</button>
+                <button data-select-item>Certificates</button>
+              </li>
+
+              <li style="color: white;" class="filter-item">
+                <button data-filter-btn>Offer Letter and Open Source</button>
               </li>
 
             </ul>
@@ -794,24 +802,115 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <!-- Projects ---------------------------------- -->
+
+            <li class="project-item  active" data-filter-item data-category="projects">
+              <a target="_blank" href="https://css-reimagine-round1-puma-website.vercel.app/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/Puma.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Puma Website</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="projects">
+              <a target="_blank" href="https://mithanshu-hedau-chatbot.onrender.com/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/chatbot.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ChatBot Assistant</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="projects">
+              <a target="_blank" href="https://heart-disease-predicition-ml-mithanshu-model.vercel.app/">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/Heart.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Heart Disease Risk Predictor</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="projects">
+              <a target="_blank" href="https://github.com/MithanshuHedau/Shortify">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/Shortify.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Shortify</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="projects">
+              <a target="_blank" href="https://github.com/MithanshuHedau/Mini_Project2">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/Resume.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Resume Shortlister</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+
+
+
+            <!-- Mini Projects --------------------- -->
+
+            <li class="project-item  active" data-filter-item data-category="mini projects"> 
               <a href="https://mithanshuhedau.github.io/Weather-App-/">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/weather.png" alt="finance" loading="lazy">
+                  <img src="./assets/weather.png" style="height: 250px;" alt="finance" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Weather App</h3>
 
-                <p class="project-category">Web development (Html css Js )</p>
-
+                <p class="project-category"></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
+            <li class="project-item  active" data-filter-item data-category="mini projects">
               <a href="https://mithanshuhedau.github.io/To-Do-List/">
 
                 <figure class="project-img">
@@ -819,17 +918,17 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/todo.png" alt="orizon" loading="lazy">
+                  <img src="./assets/images/todo.png" style="height: 250px;" alt="orizon" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">ToDO List</h3>
 
-                <p class="project-category">Web development (Html Css JS )</p>
+                <p class="project-category"></p>
 
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
+            <li class="project-item  active" data-filter-item data-category="mini projects">
               <a href="https://mithanshuhedau.github.io/lavarEv/">
 
                 <figure class="project-img">
@@ -837,33 +936,236 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/laravel.png" alt="fundo" loading="lazy">
+                  <img src="./assets/laravel.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">LavarEV Landing Page</h3>
+                <h3 class="project-title">LaraEv Landing Page</h3>
 
-                <p class="project-category">Web Development and Web design (Html css Js)</p>
-
+                <p class="project-category"></p>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+
+
+            
+
+            <!-- Certficates ------------------------ -->
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1NOv4fpGhB1j0Ze5ePHxxgYYTK3p-XFVc/view">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="data:image/jpeg;base64,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" alt="brawlhalla" loading="lazy">
+                  <img src="./assets/aicte.jpg" style="height: 250px;" alt="brawlhalla" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Coming Soon Projects  </h3>
+                <h3 class="project-title">Aicte Internship AWS</h3>
 
                 <p class="project-category"></p>
-
               </a>
             </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1PZC-RKquyNYHLl0KM98MmEXbFAsj0R-N/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/zscaler.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Aicte Internship Zscaler Zerto Trust</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1oET2onypjJnt54e7WiUdmcH9BZhLgYJN/view">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/dsa.jpg" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Data Structures and Algorithms</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1oET2onypjJnt54e7WiUdmcH9BZhLgYJN/view">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/ybi.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DS and AIML Internship</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1Ly6diXcdtlKnSeHEpKRWDTizDb6kzbyI/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/cloud.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Ai on public cloud platforms</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1kHaFNJBPCCCDGiFvZweHMk-UCUYTsJNJ/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/GenAI.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Generative Ai Tools and Techniques</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1b8-sTkCLVDMoOgAlLN9-hbsTy7xeggsj/view">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/network.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Cisco Networking Basics</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1nfn0JpLfTkrsP3BvpzWdoC6JK_BTBj8Z/view">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/data.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Cisco Data Analytics</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="certificates">
+              <a target="_blank" href="https://drive.google.com/file/d/1ZtFTDu6EOmXiym_MdQ-JJ88MBBoCg2eI/view">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/Blockchain.png" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">BlockChain Essentails Basics</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+            
+
+
+            <!-- Open Source and Offer letter -------------------------- -->
+
+
+            <li class="project-item  active" data-filter-item data-category="offer letter and open source">
+              <a target="_blank" href="https://drive.google.com/drive/folders/1X5ibvJkS5WimFDVGGDqGbd6GuOiPNva7?usp=drive_link">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/Gssoc (1).jpeg" style="height: 250px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Open Source Contributions</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="offer letter and open source">
+              <a target="_blank" href="https://drive.google.com/file/d/1i2Xt2VWix8zGh0SR-yx31pZuFnZQVNcT/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/prodigy.png" style="height: 250px; width: 270px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Prodigy Infotech</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="offer letter and open source">
+              <a target="_blank" href="https://drive.google.com/file/d/1j8VBwgP0gZE_kDs2yRYVNPHxQFiLtPga/view?usp=sharing">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/samurai.png" style="height: 250px; width: 270px;" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Coding Samurai</h3>
+
+                <p class="project-category"></p>
+              </a>
+            </li>
+
+
+
+           
+
+
+
           </ul>
 
         </section>
